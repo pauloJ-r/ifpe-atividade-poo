@@ -98,7 +98,13 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirArrayInverso(int[] array)
 	{
-		System.out.print("");
+		for(int i = array.length - 1; i >=0; i-- ) {
+			System.out.print(array[i]);
+		if(i > 0) {
+			System.out.print(",");
+		}
+	  }
+		
 	}
 	
 	/**
@@ -109,7 +115,18 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirElementosPrimos(int[] array) 
 	{
-		System.out.print("");
+		for(int i = 0; i < array.length; i++) {
+			int contador = 0;
+			for(int j = 2; j <= array[i]; j++) {
+				if(array[i] % j == 0) {
+					contador = contador + 1;
+				}
+			}
+			if(contador == 1) {
+				System.out.print(array[i] + " ");
+			}
+		}
+		
 	}
 	
 	
@@ -121,7 +138,12 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirElementosImpares(int[] array) 
 	{
-		System.out.print("");
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] % 2 != 0) {
+				System.out.print(array[i] + " ");
+			}
+		}
+		
 	}
 	
 	
@@ -133,7 +155,11 @@ public class RespostaListaExercicio {
 	 */
 	public static void imprimirElementosPares(int[] array) 
 	{
-		System.out.print("");
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] % 2 == 0) {
+				System.out.print(array[i] + " ");
+			}
+		}
 	}
 	
 	
