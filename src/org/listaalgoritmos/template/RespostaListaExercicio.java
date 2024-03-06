@@ -9,7 +9,6 @@ public class RespostaListaExercicio {
 	 * Não se faz necessário implementar dentro do escopo do método.
 	 */
 	public static void main(String[] args) {
-		
 	}
 	
 	/**
@@ -21,7 +20,8 @@ public class RespostaListaExercicio {
 	 */
 	public static float calcularImc(float peso, float altura) 
 	{
-		return 0f;
+		float resultado = peso / (altura * altura);
+		return resultado;
 	}
 	
 	/**
@@ -34,7 +34,8 @@ public class RespostaListaExercicio {
 	 */
 	public static float calcularAreaTrapezio(float baseMaior, float baseMenor, float altura) 
 	{	
-		return 0f;
+		float areaT = (((baseMaior + baseMenor)*altura)/2);
+				return areaT;
 	}
 	
 	/**
@@ -47,7 +48,11 @@ public class RespostaListaExercicio {
 	 */
 	public static int maiorEntreDoisInteiros(int a, int b) 
 	{
-		return 0;
+		if (a > b) {
+			return a;
+		} else {
+			return b;
+		}
 	}
 	
 	/**
@@ -59,7 +64,13 @@ public class RespostaListaExercicio {
 	 */
 	public static boolean verificarParImpar(int numero) 
 	{
-		return false;		
+	
+		
+		if(numero % 2 == 0 ) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 	/**
@@ -69,7 +80,14 @@ public class RespostaListaExercicio {
 	 * @return media
 	 */
 	public static float calcularMediaNotas(float[] notas) {
-		return 0f;
+		float soma = 0;
+		
+		for(int i = 0; i < notas.length; i++) {
+			soma = soma + notas[i];
+		}
+		float media = soma / notas.length;
+		return media;
+		
 	}
 	
 	/**
